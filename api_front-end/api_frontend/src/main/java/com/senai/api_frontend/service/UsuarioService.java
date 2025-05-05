@@ -1,7 +1,7 @@
 package com.senai.api_frontend.service;
 
-import com.senai.api_frontend.model.Usuario;
-import com.senai.api_frontend.repository.UsuarioRepository;
+import com.senai.api_atividade_senai.model.Usuario;
+import com.senai.api_atividade_senai.repository.UsuarioRepository;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
@@ -13,7 +13,7 @@ import java.util.List;
 public class UsuarioService {
     private UsuarioRepository usuarioRepository;
 
-    public UsuarioService(UsuarioRepository usuarioRepository){
+    public UsuarioService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
 
@@ -21,10 +21,11 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    public Usuario salvar(@Valid Usuario usuario){
+    public Usuario salvar(@Valid Usuario usuario) {
         if (usuarioRepository.findByEmail(usuario.getEmail()).isPresent()) {
-            throw new IllegalArgumentException("Usuário já cadastrado");
+            throw new IllegalArgumentException("Usuario já cadastrado.");
         }
         return usuarioRepository.save(usuario);
     }
 }
+
