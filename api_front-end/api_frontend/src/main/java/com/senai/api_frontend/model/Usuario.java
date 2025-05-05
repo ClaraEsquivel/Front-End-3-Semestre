@@ -7,30 +7,31 @@ import jakarta.validation.constraints.Size;
 
 @Entity
 public class Usuario {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    @NotBlank(message = "Nome é obrigatório")
+    @NotBlank(message = "Nome é obrigatorio")
     private String nome;
 
     @Column(nullable = false)
-    @NotBlank(message = "E-mail é obrigatório")
-    @Email(message = "Deve ser um e-mail válido")
+    @NotBlank(message = "E-mail é obrigatorio")
+    @Email(message = "Deve ser um e-mail válido.")
     private String email;
 
     @Column(nullable = false)
-    @NotBlank(message = "Senha é obrigatória")
-    @Size(min = 3, message = "A senha deve ter no mínimo 3 caracters.")
+    @NotBlank(message = "Senha é obrigatoria")
+    @Size(min = 3, message = "A senha deve ter no minimo 3 caracteres.")
     private String senha;
 
     public Usuario() {
     }
 
-    public Usuario(Long id, @NotBlank(message = "Nome é obrigatório") String nome,
-                   @NotBlank(message = "E-mail é obrigatório") @Email(message = "Deve ser um e-mail válido") String email,
-                   @NotBlank(message = "Senha é obrigatória") @Size(min = 3, message = "A senha deve ter no mínimo 3 caracters.") String senha) {
+    public Usuario(Long id, @NotBlank(message = "Nome é obrigatorio") String nome,
+                   @NotBlank(message = "E-mail é obrigatorio") @Email(message = "Deve ser um e-mail válido.") String email,
+                   @NotBlank(message = "Senha é obrigatoria") @Size(min = 3, message = "A senha deve ter no minimo 3 caracteres.") String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -71,10 +72,6 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario [id=" + id +
-                ", nome=" + nome +
-                ", email=" + email +
-                ", senha=" + senha + "]";
+        return "Usuario [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + "]";
     }
 }
-
