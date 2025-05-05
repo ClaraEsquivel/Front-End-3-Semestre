@@ -10,19 +10,18 @@ import java.util.Map;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<Map<String, Object>> handlerIllegalArgumentException(IllegalArgumentException erro) {
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
-                .body(Map.of("mensagem:", erro.getMessage()));
+                .body(Map.of("mensagem", erro.getMessage()));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, Object>> handlerMethodArgumentNotValidException(MethodArgumentNotValidException erro) {
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
-                .body(Map.of("mensagem:", erro.getFieldErrors().get(0).getDefaultMessage()));
+                .body(Map.of("mensagem", erro.getFieldErrors().get(0).getDefaultMessage()));
     }
-
-
 }
