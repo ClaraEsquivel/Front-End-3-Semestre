@@ -1,0 +1,64 @@
+.App {
+  font-family: Forum;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f7e93146;
+}
+
+.logo{
+  width: 50%;
+  margin-bottom: -20px;
+}
+
+h2 {
+  color: #0056b3;
+  margin-top: 20px;
+  margin-bottom: 10px; 
+}
+
+input[type = "text"] {
+  padding: 10px;
+  border: 1px solid #0056b3;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  border: 2px solid #0768cf;
+  margin: 20px 0;
+  width: 80%;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  width: 80%;
+  margin-top: 10px;
+}
+
+ol li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+ol li:last-child {
+  border-bottom: none;
+}
