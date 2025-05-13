@@ -1,0 +1,44 @@
+/* aula-react\src\components\UserList\styles.css */
+
+
+
+.user-list h2 {
+    /*Lista de Pokémons*/
+    color: #0056b3;
+    margin-top: 20px;
+    margin-bottom: 10px; 
+    text-align: center;
+  }
+  
+
+.user-list ol {
+    list-style-type: decimal;
+    list-style-position: inside; 
+    padding-left: 0; 
+    width: 80%;
+    margin-top: 10px;
+    text-align: center;
+}
+  
+.user-list ol li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+  
+.user-list ol li:last-child {
+    border-bottom: none;
+    text-align: center;
+}
+
+
+.user-list img {
+    width: 40% !important;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative; 
+    left: -100px; 
+}
